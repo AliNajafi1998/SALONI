@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="GroupViewOneFirstActivity">
+        <attr name="src_icon" format="integer" />
+        <attr name="hint" format="string" />
+        <attr name="max_length" format="integer" />
+        <attr name="txt_size" format="integer" />
+    </declare-styleable>
+</resources>
