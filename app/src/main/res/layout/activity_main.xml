@@ -8,17 +8,17 @@
     tools:context=".MainActivity">
 
     <com.najafi.ali.saloni.GroupViewOneFirstActivity
+        android:id="@+id/groupViewOneFirstActivity_phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="184dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
         app:hint="شماره موبایل"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
         custom:layout_constraintStart_toStartOf="parent"
         custom:layout_constraintTop_toTopOf="parent"
         custom:max_length="11"
@@ -27,4 +27,24 @@
 
     </com.najafi.ali.saloni.GroupViewOneFirstActivity>
 
+    <com.najafi.ali.saloni.GroupViewOneFirstActivity
+        android:id="@+id/groupViewOneFirstActivity_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:hint="زمزعبور"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintTop_toBottomOf="@+id/groupViewOneFirstActivity_phone"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toTopOf="@+id/groupViewOneFirstActivity_phone"
+        custom:max_length="11"
+        custom:src_icon="@drawable/ic_lock_black_24dp"
+        custom:txt_size="16">
+
+    </com.najafi.ali.saloni.GroupViewOneFirstActivity>
 </android.support.constraint.ConstraintLayout>
