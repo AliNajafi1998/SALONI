@@ -11,8 +11,6 @@
 
         android:theme="@style/AppTheme">
         <activity android:name=".FirstActivity">
-
-
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>

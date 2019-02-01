@@ -33,8 +33,6 @@ public class EnglishToPersian {
         }
         return persianText.toString();
     }
-
-
     public static Typeface createTypeFace(Context context){
         return Typeface.createFromAsset(context.getResources().getAssets(), "iransansweb.ttf");
     }
