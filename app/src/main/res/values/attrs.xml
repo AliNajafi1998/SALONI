@@ -7,4 +7,11 @@
         <attr name="max_length" format="integer" />
         <attr name="txt_size" format="integer" />
     </declare-styleable>
+
+
+
+    <declare-styleable name="GroupViewTwo1FirstActivity">
+        <attr name="text_time" format="string"/>
+
+    </declare-styleable>
 </resources>

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
+<!--
     <com.najafi.ali.saloni.GroupViewOneFirstActivity
         android:id="@+id/groupViewOneFirstActivity_phone"
         android:layout_width="wrap_content"
@@ -46,4 +46,18 @@
         custom:txt_size="16">
 
     </com.najafi.ali.saloni.GroupViewOneFirstActivity>
+!-->
+    <!--
+        <com.najafi.ali.saloni.GroupViewTwo1FirstActivity
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="152dp"
+            android:layout_marginLeft="152dp"
+            android:layout_marginTop="44dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            custom:text_time="صبح">
+
+        </com.najafi.ali.saloni.GroupViewTwo1FirstActivity>
+        !-->
 </android.support.constraint.ConstraintLayout>
