@@ -13,7 +13,7 @@
 
 
         <ImageView
-            android:id="@+id/img_phone"
+            android:id="@+id/img_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -27,7 +27,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/txt_phone_number"
+            android:id="@+id/txt_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
@@ -40,10 +40,11 @@
             android:maxLength="11"
             android:textAlignment="viewEnd"
             android:textColor="#90BD32"
-            app:layout_constraintBottom_toBottomOf="@+id/img_phone"
-            app:layout_constraintEnd_toStartOf="@+id/img_phone"
+            app:layout_constraintBottom_toBottomOf="@+id/img_icon"
+            app:layout_constraintEnd_toStartOf="@+id/img_icon"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/img_phone" />
+            app:layout_constraintTop_toTopOf="@+id/img_icon"
+            android:inputType="" />
 
     </android.support.constraint.ConstraintLayout>
 </android.support.v7.widget.CardView>

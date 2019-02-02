@@ -47,8 +47,8 @@ public class GroupViewOneFirstActivity extends CardView {
 
     private void init(Context context) {
         rootView = inflate(context, R.layout.group_view_one_first_activity, this);
-        imgPhone = rootView.findViewById(R.id.img_phone);
-        txtPhoneNumber = rootView.findViewById(R.id.txt_phone_number);
+        imgPhone = rootView.findViewById(R.id.img_icon);
+        txtPhoneNumber = rootView.findViewById(R.id.txt_view);
         txtPhoneNumber.setTypeface(EnglishToPersian.createTypeFace(context));
 
         imgPhone.setImageResource(iconId);
