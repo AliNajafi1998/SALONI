@@ -21,6 +21,9 @@ public class EnglishToPersian {
         numbers.put("7", "۷");
         numbers.put("8", "۸");
         numbers.put("9", "۹");
+        numbers.put(":", ":");
+        numbers.put("/", "/");
+        numbers.put(",", ",");
 
         if (englishText.equals("")) return "";
         StringBuilder persianText = new StringBuilder();

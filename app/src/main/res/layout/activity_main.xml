@@ -60,4 +60,53 @@
 
         </com.najafi.ali.saloni.GroupViewTwo1FirstActivity>
         !-->
+
+    <com.najafi.ali.saloni.GroupViewTwo2FirstActivity
+        android:id="@+id/groupViewTwo2FirstActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        custom:end_time="12:00"
+        custom:start_time="08:12">
+
+    </com.najafi.ali.saloni.GroupViewTwo2FirstActivity>
+
+
+    <com.najafi.ali.saloni.GroupViewTwo1FirstActivity
+        android:id="@+id/groupViewTwo1FirstActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/groupViewTwo2FirstActivity"
+        app:layout_constraintTop_toBottomOf="@+id/groupViewTwo2FirstActivity"
+        custom:isDate="true"
+        custom:text_time_date="98/12/11"></com.najafi.ali.saloni.GroupViewTwo1FirstActivity>
+
+
+    <com.najafi.ali.saloni.GroupViewTwo1FirstActivity
+        android:id="@+id/groupViewTwo1FirstActivity2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/groupViewTwo1FirstActivity"
+        app:layout_constraintTop_toBottomOf="@+id/groupViewTwo1FirstActivity"
+        custom:isDate="false"
+        custom:text_time_date="صبح">
+
+    </com.najafi.ali.saloni.GroupViewTwo1FirstActivity>
+
+
+    <com.najafi.ali.saloni.GroupViewTwo3FirstActivity
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/groupViewTwo1FirstActivity2"
+        app:layout_constraintTop_toBottomOf="@+id/groupViewTwo1FirstActivity2"
+        custom:cost_text="1235003">
+
+    </com.najafi.ali.saloni.GroupViewTwo3FirstActivity>
 </android.support.constraint.ConstraintLayout>
