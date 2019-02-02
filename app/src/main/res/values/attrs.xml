@@ -21,4 +21,8 @@
     <declare-styleable name="GroupViewTwo3FirstActivity">
         <attr name="cost_text" format="string" />
     </declare-styleable>
+
+    <declare-styleable name="GroupViewTwo4FirstActivity">
+        <attr name="hallNo" format="string"/>
+    </declare-styleable>
 </resources>

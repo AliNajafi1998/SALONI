@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="8dp">
+
+    <com.github.siyamed.shapeimageview.RoundedImageView
+        android:id="@+id/fieldView"
+        android:layout_width="95dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="32dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/field"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:siRadius="10dp"
+        app:siSquare="true" />
+
+    <TextView
+        android:id="@+id/sport_complex_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="مجتمع ورزشی افق لاله"
+        android:textColor="#565657"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/fieldView"
+        app:layout_constraintTop_toTopOf="@+id/fieldView" />
+
+    <TextView
+        android:id="@+id/hallNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="سالن شماره "
+        android:textColor="#7E7E7F"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/sport_complex_name"
+        app:layout_constraintTop_toBottomOf="@+id/sport_complex_name" />
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#7E7E7F"
+        android:textSize="18sp"
+        android:text="۱"
+        app:layout_constraintBottom_toBottomOf="@+id/hallNumber"
+        app:layout_constraintEnd_toStartOf="@+id/hallNumber"
+        app:layout_constraintTop_toTopOf="@+id/hallNumber" />
+
+
+</android.support.constraint.ConstraintLayout>

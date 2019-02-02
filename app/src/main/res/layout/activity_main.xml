@@ -84,7 +84,9 @@
         app:layout_constraintStart_toStartOf="@+id/groupViewTwo2FirstActivity"
         app:layout_constraintTop_toBottomOf="@+id/groupViewTwo2FirstActivity"
         custom:isDate="true"
-        custom:text_time_date="98/12/11"></com.najafi.ali.saloni.GroupViewTwo1FirstActivity>
+        custom:text_time_date="98/12/11">
+
+    </com.najafi.ali.saloni.GroupViewTwo1FirstActivity>
 
 
     <com.najafi.ali.saloni.GroupViewTwo1FirstActivity
@@ -101,6 +103,7 @@
 
 
     <com.najafi.ali.saloni.GroupViewTwo3FirstActivity
+        android:id="@+id/groupViewTwo3FirstActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -109,4 +112,14 @@
         custom:cost_text="1235003">
 
     </com.najafi.ali.saloni.GroupViewTwo3FirstActivity>
+
+    <com.najafi.ali.saloni.GroupViewTwo4FirstActivity
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/groupViewTwo3FirstActivity"
+        app:layout_constraintTop_toBottomOf="@+id/groupViewTwo3FirstActivity"
+        custom:hallNo="2">
+    </com.najafi.ali.saloni.GroupViewTwo4FirstActivity>
+
 </android.support.constraint.ConstraintLayout>
