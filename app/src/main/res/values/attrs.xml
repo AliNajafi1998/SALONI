@@ -8,7 +8,6 @@
         <attr name="txt_size" format="integer" />
     </declare-styleable>
 
-
     <declare-styleable name="GroupViewTwo1FirstActivity">
         <attr name="text_time_date" format="string" />
         <attr name="isDate" format="boolean" /><!-- 0->time 1->date -->
@@ -18,11 +17,13 @@
         <attr name="start_time" format="string" />
         <attr name="end_time" format="string" />
     </declare-styleable>
+
     <declare-styleable name="GroupViewTwo3FirstActivity">
         <attr name="cost_text" format="string" />
     </declare-styleable>
 
     <declare-styleable name="GroupViewTwo4FirstActivity">
-        <attr name="hallNo" format="string"/>
+        <attr name="hallNo" format="string" />
     </declare-styleable>
+
 </resources>

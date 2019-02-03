@@ -6,120 +6,78 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-<!--
-    <com.najafi.ali.saloni.GroupViewOneFirstActivity
-        android:id="@+id/groupViewOneFirstActivity_phone"
+
+    <android.support.v7.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="184dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        app:hint="شماره موبایل"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
-        custom:layout_constraintStart_toStartOf="parent"
-        custom:layout_constraintTop_toTopOf="parent"
-        custom:max_length="11"
-        custom:src_icon="@drawable/ic_phone_android_black_24dp"
-        custom:txt_size="16">
-
-    </com.najafi.ali.saloni.GroupViewOneFirstActivity>
-
-    <com.najafi.ali.saloni.GroupViewOneFirstActivity
-        android:id="@+id/groupViewOneFirstActivity_pass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        app:hint="زمزعبور"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/groupViewOneFirstActivity_phone"
-        custom:layout_constraintStart_toStartOf="parent"
-        custom:layout_constraintTop_toTopOf="@+id/groupViewOneFirstActivity_phone"
-        custom:max_length="11"
-        custom:src_icon="@drawable/ic_lock_black_24dp"
-        custom:txt_size="16">
-
-    </com.najafi.ali.saloni.GroupViewOneFirstActivity>
-!-->
-    <!--
-        <com.najafi.ali.saloni.GroupViewTwo1FirstActivity
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="152dp"
-            android:layout_marginLeft="152dp"
-            android:layout_marginTop="44dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            custom:text_time="صبح">
-
-        </com.najafi.ali.saloni.GroupViewTwo1FirstActivity>
-        !-->
-
-    <com.najafi.ali.saloni.GroupViewTwo2FirstActivity
-        android:id="@+id/groupViewTwo2FirstActivity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginLeft="68dp"
-        android:layout_marginTop="48dp"
+        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        custom:end_time="12:00"
-        custom:start_time="08:12">
+        app:layout_constraintVertical_bias="0.23000002">
 
-    </com.najafi.ali.saloni.GroupViewTwo2FirstActivity>
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
+            <com.najafi.ali.saloni.GroupViewTwo1FirstActivity
+                android:id="@+id/groupViewTwo1FirstActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                app:isDate="false"
+                app:layout_constraintBottom_toBottomOf="@+id/groupViewTwo2FirstActivity"
+                app:layout_constraintStart_toEndOf="@+id/groupViewTwo2FirstActivity"
+                app:layout_constraintTop_toTopOf="@+id/groupViewTwo2FirstActivity"
+                app:layout_constraintVertical_bias="0.0"
+                app:text_time_date="صبح" />
 
-    <com.najafi.ali.saloni.GroupViewTwo1FirstActivity
-        android:id="@+id/groupViewTwo1FirstActivity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/groupViewTwo2FirstActivity"
-        app:layout_constraintTop_toBottomOf="@+id/groupViewTwo2FirstActivity"
-        custom:isDate="true"
-        custom:text_time_date="98/12/11">
+            <com.najafi.ali.saloni.GroupViewTwo1FirstActivity
+                android:id="@+id/groupViewTwo1FirstActivity3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                app:isDate="true"
+                app:layout_constraintBottom_toBottomOf="@+id/groupViewTwo3FirstActivity"
+                app:layout_constraintStart_toEndOf="@+id/groupViewTwo3FirstActivity"
+                app:layout_constraintTop_toTopOf="@+id/groupViewTwo3FirstActivity"
+                app:layout_constraintVertical_bias="0.0"
+                app:text_time_date="96/12/08" />
 
-    </com.najafi.ali.saloni.GroupViewTwo1FirstActivity>
+            <com.najafi.ali.saloni.GroupViewTwo2FirstActivity
+                android:id="@+id/groupViewTwo2FirstActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                app:end_time="12:00"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/groupViewTwo4FirstActivity"
+                app:start_time="08:00" />
 
+            <com.najafi.ali.saloni.GroupViewTwo3FirstActivity
+                android:id="@+id/groupViewTwo3FirstActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cost_text="24000"
+                app:layout_constraintStart_toStartOf="@+id/groupViewTwo2FirstActivity"
+                app:layout_constraintTop_toBottomOf="@+id/groupViewTwo2FirstActivity" />
 
-    <com.najafi.ali.saloni.GroupViewTwo1FirstActivity
-        android:id="@+id/groupViewTwo1FirstActivity2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/groupViewTwo1FirstActivity"
-        app:layout_constraintTop_toBottomOf="@+id/groupViewTwo1FirstActivity"
-        custom:isDate="false"
-        custom:text_time_date="صبح">
-
-    </com.najafi.ali.saloni.GroupViewTwo1FirstActivity>
-
-
-    <com.najafi.ali.saloni.GroupViewTwo3FirstActivity
-        android:id="@+id/groupViewTwo3FirstActivity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/groupViewTwo1FirstActivity2"
-        app:layout_constraintTop_toBottomOf="@+id/groupViewTwo1FirstActivity2"
-        custom:cost_text="1235003">
-
-    </com.najafi.ali.saloni.GroupViewTwo3FirstActivity>
-
-    <com.najafi.ali.saloni.GroupViewTwo4FirstActivity
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/groupViewTwo3FirstActivity"
-        app:layout_constraintTop_toBottomOf="@+id/groupViewTwo3FirstActivity"
-        custom:hallNo="2">
-    </com.najafi.ali.saloni.GroupViewTwo4FirstActivity>
-
+            <com.najafi.ali.saloni.GroupViewTwo4FirstActivity
+                android:id="@+id/groupViewTwo4FirstActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:hallNo="3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
 </android.support.constraint.ConstraintLayout>

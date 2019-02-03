@@ -4,21 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:paddingLeft="8dp">
+   >
 
     <com.github.siyamed.shapeimageview.RoundedImageView
         android:id="@+id/fieldView"
-        android:layout_width="95dp"
-        android:layout_height="93dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="32dp"
+        android:layout_width="70dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
         android:scaleType="fitXY"
         android:src="@drawable/field"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/hallNumber"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:siRadius="10dp"
         app:siSquare="true" />
 
@@ -26,7 +31,7 @@
         android:id="@+id/sport_complex_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:text="مجتمع ورزشی افق لاله"
@@ -41,11 +46,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="سالن شماره "
         android:textColor="#7E7E7F"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/sport_complex_name"
-        app:layout_constraintTop_toBottomOf="@+id/sport_complex_name" />
+        app:layout_constraintTop_toBottomOf="@+id/sport_complex_name"
+        android:text="سالن شماره" />
 
     <TextView
         android:id="@+id/number"
@@ -53,7 +58,7 @@
         android:layout_height="wrap_content"
         android:textColor="#7E7E7F"
         android:textSize="18sp"
-        android:text="۱"
+        android:text=" یک"
         app:layout_constraintBottom_toBottomOf="@+id/hallNumber"
         app:layout_constraintEnd_toStartOf="@+id/hallNumber"
         app:layout_constraintTop_toTopOf="@+id/hallNumber" />
