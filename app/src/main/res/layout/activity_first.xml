@@ -1,7 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:custom="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstActivity"/>
+    tools:context=".FirstActivity">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.najafi.ali.saloni.GroupViewTwo1FirstActivity
+                android:id="@+id/groupViewTwo1FirstActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                app:isDate="false"
+                app:layout_constraintBottom_toBottomOf="@+id/groupViewTwo2FirstActivity"
+                app:layout_constraintStart_toEndOf="@+id/groupViewTwo2FirstActivity"
+                app:layout_constraintTop_toTopOf="@+id/groupViewTwo2FirstActivity"
+                app:layout_constraintVertical_bias="0.0"
+                app:text_time_date="صبح" />
+
+            <com.najafi.ali.saloni.GroupViewTwo1FirstActivity
+                android:id="@+id/groupViewTwo1FirstActivity3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                app:isDate="true"
+                app:layout_constraintBottom_toBottomOf="@+id/groupViewTwo3FirstActivity"
+                app:layout_constraintStart_toEndOf="@+id/groupViewTwo3FirstActivity"
+                app:layout_constraintTop_toTopOf="@+id/groupViewTwo3FirstActivity"
+                app:layout_constraintVertical_bias="0.0"
+                app:text_time_date="96/12/08" />
+
+            <com.najafi.ali.saloni.GroupViewTwo2FirstActivity
+                android:id="@+id/groupViewTwo2FirstActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                app:end_time="12:00"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/groupViewTwo4FirstActivity"
+                app:start_time="08:00" />
+
+            <com.najafi.ali.saloni.GroupViewTwo3FirstActivity
+                android:id="@+id/groupViewTwo3FirstActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cost_text="24000"
+                app:layout_constraintStart_toStartOf="@+id/groupViewTwo2FirstActivity"
+                app:layout_constraintTop_toBottomOf="@+id/groupViewTwo2FirstActivity" />
+
+            <com.najafi.ali.saloni.GroupViewTwo4FirstActivity
+                android:id="@+id/groupViewTwo4FirstActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:hallNo="3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="جزيیات سفارش شما به شرح زیر است."
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/view_tab"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_marginTop="8dp"
+        android:background="#e3e3e3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="#51af57"
+        app:tabMode="fixed" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="265dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_tab">
+
+    </android.support.v4.view.ViewPager>
+</android.support.constraint.ConstraintLayout>

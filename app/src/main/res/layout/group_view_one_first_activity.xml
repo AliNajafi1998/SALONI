@@ -1,48 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:padding="4dp"
-    app:cardCornerRadius="3dp">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-    <android.support.constraint.ConstraintLayout
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="4dp"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
+        <com.najafi.ali.saloni.GroupViewOne1FirstActivity
+            android:id="@+id/groupViewOne1FirstActivity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:hint="شماره موبایل"
+            app:max_length="11"
+            app:src_icon="@drawable/ic_phone_android_black_24dp"
+            app:txt_size="16" />
 
-        <ImageView
-            android:id="@+id/img_icon"
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:elevation="4dp"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/cardView1"
+        app:layout_constraintStart_toStartOf="@+id/cardView1"
+        app:layout_constraintTop_toBottomOf="@+id/cardView1">
+
+        <com.najafi.ali.saloni.GroupViewOne1FirstActivity
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
-            android:scaleType="fitXY"
-            android:tint="#90BD32"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/txt_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:background="@android:color/transparent"
-            android:gravity="end"
-            android:inputType=""
-            android:maxLength="11"
-            android:maxLines="1"
-            android:textAlignment="viewEnd"
-            android:textColor="#90BD32"
-            app:layout_constraintBottom_toBottomOf="@+id/img_icon"
-            app:layout_constraintEnd_toStartOf="@+id/img_icon"
-            app:layout_constraintTop_toTopOf="@+id/img_icon" />
+            app:hint="رمز عبور"
+            app:max_length="11"
+            app:src_icon="@drawable/ic_lock_black_24dp"
+            app:txt_size="16" />
 
-    </android.support.constraint.ConstraintLayout>
-</android.support.v7.widget.CardView>
+    </android.support.v7.widget.CardView>
+
+
+    <com.najafi.ali.saloni.GroupViewOne2FirstActivity
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+</android.support.constraint.ConstraintLayout>
