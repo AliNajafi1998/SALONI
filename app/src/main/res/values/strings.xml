@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">COMPLETEDSALONI</string>
+    <string name="desc">خوشحال میشویم که ایراد هایمان را به ما بگویید تا هرچه سریعتر آن ها را اصلاح کنیم.</string>
+    <string name="send">ارسال</string>
+    <string name="message">متن پیام شما ...</string>
+    <string name="number">شماره موبایل</string>
+    <string name="insertion">کاربر مهمان</string>
+    <string name="home1">خانه</string>
+    <string name="inserting1">ورود و عضویت</string>
+    <string name="support1">بسته های خدماتی</string>
+    <string name="search1">جستجوی پیشرفته</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="supporting1">پشتیبانی</string>
+    <string name="question1">سوالات متداول</string>
 </resources>

@@ -9,16 +9,21 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,6 +43,10 @@ public class FirstActivity extends AppCompatActivity {
     Typeface typeface;
     TabLayout tabLayout;
     SlidePagerAdapter slidePagerAdapter;
+    private ArrayList<String> names = new ArrayList<>();
+    private ArrayList<Integer> icons = new ArrayList<>();
+    DrawerLayout drawerLayout;
+    int num = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,10 +57,10 @@ public class FirstActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.vp);
         tabLayout = findViewById(R.id.view_tab);
         changeFont();
+        preparingData();
         customActionbar();
         avoidStatusBarChange();
 
-        preparingData();
 
         slidePagerAdapter = new SlidePagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(slidePagerAdapter);
@@ -66,6 +75,18 @@ public class FirstActivity extends AppCompatActivity {
     }
 
     private void preparingData() {
+        names.add("خانه");
+        names.add("ورود و عضویت");
+        names.add("بسته های خدماتی");
+        names.add("جستجوی پیشرفته");
+        names.add("سؤالات متداول");
+        names.add("پشتیبانی");
+        icons.add(R.drawable.home);
+        icons.add(R.drawable.man);
+        icons.add(R.drawable.support);
+        icons.add(R.drawable.ic_search_black_24dp);
+        icons.add(R.drawable.question);
+        icons.add(R.drawable.mail);
 
         tabItems.add("ثبت نام");
         tabItems.add("ورود");
@@ -95,6 +116,7 @@ public class FirstActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             return tabItems.get(position);
         }
+
     }
 
     private void avoidStatusBarChange() {
@@ -125,23 +147,33 @@ public class FirstActivity extends AppCompatActivity {
     }
 
     private void customActionbar() {
+        drawerLayout = findViewById(R.id.activityRoot);
+        NaigationBarAdapter adapter = new NaigationBarAdapter(this, names, icons);
+        ListView list = findViewById(R.id.listOfNav);
+        list.setAdapter(adapter);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ImageButton back = toolbar.findViewById(R.id.action_bar_back);
         ImageButton threeLines = toolbar.findViewById(R.id.action_bar_three_lines);
         TextView textView = toolbar.findViewById(R.id.app_name);
-
+        //TODO: CHANGING THE TEXT VIEW FONT
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            Toast.makeText(FirstActivity.this,"Back Button Clicked!",Toast.LENGTH_SHORT).show();
+                Toast.makeText(FirstActivity.this, "Back Button Clicked!", Toast.LENGTH_SHORT).show();
             }
         });
         threeLines.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(FirstActivity.this,"Three Lines Clicked!",Toast.LENGTH_SHORT).show();
+
+                num++;
+                if (num % 2 == 1) {
+                    drawerLayout.openDrawer(GravityCompat.END);
+                } else {
+                    drawerLayout.closeDrawer(GravityCompat.END);
+                }
             }
         });
     }
