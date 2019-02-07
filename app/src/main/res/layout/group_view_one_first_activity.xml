@@ -70,7 +70,7 @@
         android:layout_height="47dp"
         android:layout_marginTop="12dp"
         android:background="@drawable/btn_search"
-        android:text="جستجو"
+        android:text="ورود به سیستم"
         android:textColor="#fff"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/cardView2"
