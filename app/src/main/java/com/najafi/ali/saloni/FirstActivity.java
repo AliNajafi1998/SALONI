@@ -4,6 +4,7 @@ package com.najafi.ali.saloni;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -13,7 +14,6 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Window;
@@ -21,6 +21,7 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import java.util.ArrayList;
 
 public class FirstActivity extends AppCompatActivity {
@@ -51,7 +52,6 @@ public class FirstActivity extends AppCompatActivity {
         preparingData();
         customActionbar();
         avoidStatusBarChange();
-
 
         slidePagerAdapter = new SlidePagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(slidePagerAdapter);
@@ -87,10 +87,9 @@ public class FirstActivity extends AppCompatActivity {
     }
 
     class SlidePagerAdapter extends FragmentPagerAdapter {
-        public SlidePagerAdapter(FragmentManager fm) {
+        SlidePagerAdapter(FragmentManager fm) {
             super(fm);
         }
-
 
         @Override
         public Fragment getItem(int i) {
