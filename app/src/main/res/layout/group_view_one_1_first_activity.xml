@@ -24,16 +24,15 @@
 
         <EditText
             android:id="@+id/txt_view"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:background="@android:color/transparent"
-            android:gravity="end"
+            android:gravity="right"
             android:inputType=""
             android:maxLength="11"
             android:maxLines="1"
-            android:textAlignment="viewEnd"
             android:textColor="#90BD32"
             app:layout_constraintBottom_toBottomOf="@+id/img_icon"
             app:layout_constraintEnd_toStartOf="@+id/img_icon"

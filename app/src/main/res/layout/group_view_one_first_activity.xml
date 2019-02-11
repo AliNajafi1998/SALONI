@@ -44,7 +44,6 @@
         <com.najafi.ali.saloni.GroupViewOne1FirstActivity
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             app:hint="رمز عبور"
             app:max_length="11"
             app:src_icon="@drawable/ic_lock_black_24dp"
@@ -64,7 +63,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_search" />
 
-    <Button
+    <android.support.v7.widget.AppCompatButton
         android:id="@+id/btn_search"
         android:layout_width="329dp"
         android:layout_height="47dp"

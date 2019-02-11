@@ -7,9 +7,10 @@
         android:id="@+id/ic_image"
         android:layout_width="33dp"
         android:layout_height="33dp"
-        android:layout_marginEnd="8dp"
         android:layout_alignParentEnd="true"
-        android:layout_margin="8dp" />
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
 
     <TextView
         android:id="@+id/menuText"

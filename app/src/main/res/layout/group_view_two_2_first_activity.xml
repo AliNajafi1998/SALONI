@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:padding="6dp"
     android:layout_height="wrap_content">
 
-    <TextView
+    <android.support.v7.widget.AppCompatTextView
         android:id="@+id/time_from_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -15,13 +14,13 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:textColor="#565657"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <android.support.v7.widget.AppCompatTextView
         android:id="@+id/tv_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,7 +32,7 @@
         app:layout_constraintEnd_toStartOf="@+id/time_from_txt"
         app:layout_constraintTop_toTopOf="@+id/time_from_txt" />
 
-    <TextView
+    <android.support.v7.widget.AppCompatTextView
         android:id="@+id/tv_to"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
