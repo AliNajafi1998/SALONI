@@ -35,7 +35,7 @@ public class NavigationBarAdapter extends BaseAdapter {
 
     @Override
     public long getItemId(int position) {
-        return 0;
+        return position;
     }
 
     @Override
@@ -56,7 +56,7 @@ public class NavigationBarAdapter extends BaseAdapter {
         viewHolder.icon.setImageResource(mnu_ItemsIcon.get(position));
         viewHolder.image_text.setText(mnu_ItemsName.get(position));
 
-        Typeface typeface = EnglishToPersian.createTypeFace(context);
+        Typeface typeface = EnglishToPersian.createTypeFace1(context);
         viewHolder.image_text.setTypeface(typeface);
 
 
@@ -74,7 +74,5 @@ public class NavigationBarAdapter extends BaseAdapter {
             this.icon = view.findViewById(R.id.ic_image);
             this.image_text = view.findViewById(R.id.menuText);
         }
-
-
     }
 }

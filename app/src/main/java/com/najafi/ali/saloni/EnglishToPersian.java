@@ -36,7 +36,11 @@ public class EnglishToPersian {
         }
         return persianText.toString();
     }
-    public static Typeface createTypeFace(Context context){
+    public static Typeface createTypeFace1(Context context){
         return Typeface.createFromAsset(context.getResources().getAssets(), "iransansweb.ttf");
+    }
+
+    public static Typeface createTypeFace2(Context context){
+        return Typeface.createFromAsset(context.getResources().getAssets(), "superclarendonbold.ttf");
     }
 }

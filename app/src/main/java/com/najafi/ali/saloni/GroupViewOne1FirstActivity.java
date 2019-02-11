@@ -49,7 +49,7 @@ public class GroupViewOne1FirstActivity extends ConstraintLayout {
         rootView = inflate(context, R.layout.group_view_one_1_first_activity, this);
         imgPhone = rootView.findViewById(R.id.img_icon);
         txtPhoneNumber = rootView.findViewById(R.id.txt_view);
-        txtPhoneNumber.setTypeface(EnglishToPersian.createTypeFace(context));
+        txtPhoneNumber.setTypeface(EnglishToPersian.createTypeFace1(context));
 
         imgPhone.setImageResource(iconId);
         txtPhoneNumber.setHint(hint);

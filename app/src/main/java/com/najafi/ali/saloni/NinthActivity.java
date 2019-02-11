@@ -1,20 +1,14 @@
 package com.najafi.ali.saloni;
 
-
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Build;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.GravityCompat;
-import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Window;
@@ -26,94 +20,28 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class FirstActivity extends AppCompatActivity {
-
-
-    ArrayList<Fragment> fragments = new ArrayList<>();
-    ArrayList<String> tabItems = new ArrayList<>();
-
-    TextView appName;
-    TextView desc;
-    ViewPager viewPager;
-    Typeface typeface1;
-    Typeface typeface2;
-    TabLayout tabLayout;
-    SlidePagerAdapter slidePagerAdapter;
-    private ArrayList<String> names = new ArrayList<>();
-    private ArrayList<Integer> icons = new ArrayList<>();
+public class NinthActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     int num = 0;
+    TextView appName;
+    TextView description;
+    Typeface typeface2;
+    Typeface typeface1;
+    private ArrayList<String> names = new ArrayList<>();
+    private ArrayList<Integer> icons = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_first);
+        setContentView(R.layout.activity_ninth);
         changeStatusBarColor();
-        appName = findViewById(R.id.app_name);
-        desc = findViewById(R.id.description);
-        viewPager = findViewById(R.id.vp);
-        tabLayout = findViewById(R.id.view_tab);
-        changeFont();
+        appName = findViewById(R.id.app_name9);
+        description = findViewById(R.id.desc);
+
         preparingData();
         customActionbar();
         avoidStatusBarChange();
 
-        slidePagerAdapter = new SlidePagerAdapter(getSupportFragmentManager());
-        viewPager.setAdapter(slidePagerAdapter);
-        tabLayout.setupWithViewPager(viewPager);
-        viewPager.beginFakeDrag();
-    }
-
-
-    private void changeFont() {
-        typeface1 = EnglishToPersian.createTypeFace1(this);
-        desc.setTypeface(typeface1);
-        typeface2 = EnglishToPersian.createTypeFace2(this);
-        appName.setTypeface(typeface2);
-
-    }
-
-    private void preparingData() {
-        names.add("خانه");
-        names.add("ورود و عضویت");
-        names.add("بسته های خدماتی");
-        names.add("جستجوی پیشرفته");
-        names.add("سؤالات متداول");
-        names.add("پشتیبانی");
-        icons.add(R.drawable.home);
-        icons.add(R.drawable.man);
-        icons.add(R.drawable.support);
-        icons.add(R.drawable.ic_search_black_24dp);
-        icons.add(R.drawable.question);
-        icons.add(R.drawable.mail);
-
-        tabItems.add("ثبت نام");
-        tabItems.add("ورود");
-        fragments.add(new RegisterFragment());//Here The fragments must be added!
-        fragments.add(new EnterFragment());
-
-    }
-
-    class SlidePagerAdapter extends FragmentPagerAdapter {
-        SlidePagerAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        @Override
-        public Fragment getItem(int i) {
-            return fragments.get(i);
-        }
-
-        @Override
-        public int getCount() {
-            return fragments.size();
-        }
-
-        @Nullable
-        @Override
-        public CharSequence getPageTitle(int position) {
-            return tabItems.get(position);
-        }
 
     }
 
@@ -144,18 +72,41 @@ public class FirstActivity extends AppCompatActivity {
         }
     }
 
-    private void customActionbar() {
-        PrepareNavigationList();
+    private void changeFont() {
+        typeface1 = EnglishToPersian.createTypeFace1(this);
+        description.setTypeface(typeface1);
+        typeface2 = EnglishToPersian.createTypeFace2(this);
+        appName.setTypeface(typeface2);
+    }
 
-        drawerLayout = findViewById(R.id.activityRoot);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+    private void preparingData() {
+        names.add("خانه");
+        names.add("ورود و عضویت");
+        names.add("بسته های خدماتی");
+        names.add("جستجوی پیشرفته");
+        names.add("سؤالات متداول");
+        names.add("پشتیبانی");
+        icons.add(R.drawable.home);
+        icons.add(R.drawable.man);
+        icons.add(R.drawable.support);
+        icons.add(R.drawable.ic_search_black_24dp);
+        icons.add(R.drawable.question);
+        icons.add(R.drawable.mail);
+
+    }
+
+    private void customActionbar() {
+        PrepareNavigationBar();
+        drawerLayout = findViewById(R.id.activityRoot9);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar9);
         setSupportActionBar(toolbar);
-        ImageButton back = toolbar.findViewById(R.id.action_bar_back);
-        ImageButton threeLines = toolbar.findViewById(R.id.action_bar_three_lines);
+        ImageButton back = toolbar.findViewById(R.id.action_bar_back9);
+        ImageButton threeLines = toolbar.findViewById(R.id.action_bar_three_lines9);
+        changeFont();
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(FirstActivity.this, "Back Button Clicked!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(NinthActivity.this, "Back Button Clicked!", Toast.LENGTH_SHORT).show();
             }
         });
         threeLines.setOnClickListener(new View.OnClickListener() {
@@ -172,21 +123,22 @@ public class FirstActivity extends AppCompatActivity {
         });
     }
 
-    private void PrepareNavigationList() {
+    private void PrepareNavigationBar() {
         NavigationBarAdapter adapter = new NavigationBarAdapter(this, names, icons);
-        ListView list = findViewById(R.id.listOfNav);
+        ListView list = findViewById(R.id.listOfNav9);
         list.setAdapter(adapter);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position){
                     case 0:
+                        startActivity(new Intent(NinthActivity.this,FirstActivity.class));
+                        finish();
                         break;
                     case 1:
                         break;
                     case 2:
-                         startActivity(new Intent(FirstActivity.this,NinthActivity.class));
-                         finish();
+
                         break;
                     case 3:
                         break;

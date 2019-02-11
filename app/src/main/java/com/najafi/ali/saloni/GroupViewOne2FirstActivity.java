@@ -36,6 +36,6 @@ public class GroupViewOne2FirstActivity extends LinearLayout {
         rootView = inflate(context, R.layout.group_view_one_2_first_activity, this);
 
         textView = rootView.findViewById(R.id.tv_help);
-        textView.setTypeface(EnglishToPersian.createTypeFace(context));
+        textView.setTypeface(EnglishToPersian.createTypeFace1(context));
     }
 }

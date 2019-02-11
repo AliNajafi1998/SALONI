@@ -47,7 +47,7 @@ public class GroupViewTwo3FirstActivity extends ConstraintLayout {
 
         tvCost.setText("هزینه:");
         currency.setText("تومان");
-        Typeface typeface = EnglishToPersian.createTypeFace(context);
+        Typeface typeface = EnglishToPersian.createTypeFace1(context);
         tvCost.setTypeface(typeface);
         cost.setTypeface(typeface);
         currency.setTypeface(typeface);
