@@ -11,12 +11,12 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class NaigationBarAdapter extends BaseAdapter {
+public class NavigationBarAdapter extends BaseAdapter {
     Context context;
     ArrayList<String> mnu_ItemsName;
     ArrayList<Integer> mnu_ItemsIcon;
 
-    public NaigationBarAdapter(Context context, ArrayList<String> mnu_ItemsName, ArrayList<Integer> mnu_ItemsIcon) {
+    public NavigationBarAdapter(Context context, ArrayList<String> mnu_ItemsName, ArrayList<Integer> mnu_ItemsIcon) {
         this.context = context;
         this.mnu_ItemsName = mnu_ItemsName;
         this.mnu_ItemsIcon = mnu_ItemsIcon;

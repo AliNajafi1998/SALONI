@@ -62,5 +62,4 @@
         app:layout_constraintEnd_toStartOf="@+id/hallNumber"
         app:layout_constraintTop_toTopOf="@+id/hallNumber" />
 
-
 </android.support.constraint.ConstraintLayout>

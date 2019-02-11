@@ -18,7 +18,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
         <com.najafi.ali.saloni.GroupViewOne1FirstActivity
             android:id="@+id/groupViewOne1FirstActivity"
             android:layout_width="match_parent"

@@ -38,20 +38,6 @@ public class GroupViewTwo4FirstActivity extends ConstraintLayout {
         sportComplexName = rootView.findViewById(R.id.sport_complex_name);
         hallNumber = rootView.findViewById(R.id.hallNumber);
         number = rootView.findViewById(R.id.number);
-
-//        Typeface typeface = EnglishToPersian.createTypeFace(context);
-//        sportComplexName.setTypeface(typeface);
-//        hallNumber.setTypeface(typeface);
-//        number.setTypeface(typeface);
-//
-//        sportComplexName.setText("مجتمع ورزشی افق لاله");
-//        hallNumber.setText("سالن شماره");
-//
-//
-//        number.setText("یک");
-
-
-
     }
 
 }

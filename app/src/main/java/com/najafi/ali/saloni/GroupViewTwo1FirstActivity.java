@@ -16,7 +16,6 @@ public class GroupViewTwo1FirstActivity extends ConstraintLayout {
     TextView tvTimeDate;
     String text;
 
-
     public GroupViewTwo1FirstActivity(Context context) {
         super(context);
         init(context);
@@ -33,11 +32,9 @@ public class GroupViewTwo1FirstActivity extends ConstraintLayout {
         isDate = ta.getBoolean(R.styleable.GroupViewTwo1FirstActivity_isDate, false);
         text = ta.getString(R.styleable.GroupViewTwo1FirstActivity_text_time_date);
 
-
         ta.recycle();
         init(context);
     }
-
 
     private void init(Context context) {
         rootView = inflate(context, R.layout.group_view_two_1_first_activity, this);
@@ -56,7 +53,5 @@ public class GroupViewTwo1FirstActivity extends ConstraintLayout {
             tvTimeDateUI.setText("زمان:");
             tvTimeDate.setText(text);
         }
-
-
     }
 }

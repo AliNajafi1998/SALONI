@@ -138,7 +138,7 @@ public class FirstActivity extends AppCompatActivity {
 
     private void customActionbar() {
         drawerLayout = findViewById(R.id.activityRoot);
-        NaigationBarAdapter adapter = new NaigationBarAdapter(this, names, icons);
+        NavigationBarAdapter adapter = new NavigationBarAdapter(this, names, icons);
         ListView list = findViewById(R.id.listOfNav);
         list.setAdapter(adapter);
 

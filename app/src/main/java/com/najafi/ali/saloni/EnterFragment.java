@@ -14,8 +14,6 @@ public class EnterFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.group_view_one_first_activity, container, false);
-
-
         return rootView;
     }
 }

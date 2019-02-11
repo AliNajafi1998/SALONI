@@ -21,7 +21,6 @@ public class GroupViewTwo3FirstActivity extends ConstraintLayout {
     TextView currency;
     String text;
 
-
     public GroupViewTwo3FirstActivity(Context context) {
         super(context);
         init(context);

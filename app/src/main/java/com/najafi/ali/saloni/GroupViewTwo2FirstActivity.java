@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 public class GroupViewTwo2FirstActivity extends ConstraintLayout {
 
-
     View rootView;
     TextView tvStart;
     TextView tvEnd;
