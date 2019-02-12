@@ -24,6 +24,7 @@
 
     <declare-styleable name="GroupViewTwo4FirstActivity">
         <attr name="hallNo" format="string" />
+        <attr name="complex_name" format="string"/>
     </declare-styleable>
 
 </resources>

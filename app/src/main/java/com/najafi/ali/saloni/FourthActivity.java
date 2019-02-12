@@ -8,6 +8,8 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Window;
@@ -19,28 +21,44 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class NinthActivity extends AppCompatActivity {
+public class FourthActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     int num = 0;
     TextView appName;
-    TextView description;
     Typeface typeface2;
-    Typeface typeface1;
     private ArrayList<String> names = new ArrayList<>();
     private ArrayList<Integer> icons = new ArrayList<>();
-
+    RecyclerView recyclerView;
+    LinearLayoutManager llm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ninth);
+        setContentView(R.layout.activity_fourth);
         changeStatusBarColor();
-        appName = findViewById(R.id.app_name9);
-        description = findViewById(R.id.desc);
+        appName = findViewById(R.id.app_name4);
+        recyclerView = findViewById(R.id.recyclerView_fourth);
+        llm = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(llm);
+
 
         preparingData();
         customActionbar();
         avoidStatusBarChange();
+    }
 
+    private void preparingData() {
+        names.add("خانه");
+        names.add("ورود و عضویت");
+        names.add("بسته های خدماتی");
+        names.add("جستجوی پیشرفته");
+        names.add("سؤالات متداول");
+        names.add("پشتیبانی");
+        icons.add(R.drawable.home);
+        icons.add(R.drawable.man);
+        icons.add(R.drawable.support);
+        icons.add(R.drawable.ic_search_black_24dp);
+        icons.add(R.drawable.question);
+        icons.add(R.drawable.mail);
 
     }
 
@@ -72,40 +90,22 @@ public class NinthActivity extends AppCompatActivity {
     }
 
     private void changeFont() {
-        typeface1 = EnglishToPersian.createTypeFace1(this);
-        description.setTypeface(typeface1);
         typeface2 = EnglishToPersian.createTypeFace2(this);
         appName.setTypeface(typeface2);
     }
 
-    private void preparingData() {
-        names.add("خانه");
-        names.add("ورود و عضویت");
-        names.add("بسته های خدماتی");
-        names.add("جستجوی پیشرفته");
-        names.add("سؤالات متداول");
-        names.add("پشتیبانی");
-        icons.add(R.drawable.home);
-        icons.add(R.drawable.man);
-        icons.add(R.drawable.support);
-        icons.add(R.drawable.ic_search_black_24dp);
-        icons.add(R.drawable.question);
-        icons.add(R.drawable.mail);
-
-    }
-
     private void customActionbar() {
         PrepareNavigationBar();
-        drawerLayout = findViewById(R.id.activityRoot9);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar9);
+        drawerLayout = findViewById(R.id.activityRoot4);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar4);
         setSupportActionBar(toolbar);
-        ImageButton back = toolbar.findViewById(R.id.action_bar_back9);
-        ImageButton threeLines = toolbar.findViewById(R.id.action_bar_three_lines9);
+        ImageButton back = toolbar.findViewById(R.id.action_bar_back4);
+        ImageButton threeLines = toolbar.findViewById(R.id.action_bar_three_lines4);
         changeFont();
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(NinthActivity.this, "Back Button Clicked!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(FourthActivity.this, "Back Button Clicked!", Toast.LENGTH_SHORT).show();
             }
         });
         threeLines.setOnClickListener(new View.OnClickListener() {
@@ -124,14 +124,15 @@ public class NinthActivity extends AppCompatActivity {
 
     private void PrepareNavigationBar() {
         NavigationBarAdapter adapter = new NavigationBarAdapter(this, names, icons);
-        ListView list = findViewById(R.id.listOfNav9);
+        ListView list = findViewById(R.id.listOfNav);
         list.setAdapter(adapter);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //TODO the intents of the NavigationBar
                 switch (position){
                     case 0:
-                        startActivity(new Intent(NinthActivity.this,FirstActivity.class));
+                        startActivity(new Intent(FourthActivity.this,FirstActivity.class));
                         finish();
                         break;
                     case 1:
