@@ -129,9 +129,9 @@ public class NinthActivity extends AppCompatActivity {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch (position){
+                switch (position) {
                     case 0:
-                        startActivity(new Intent(NinthActivity.this,FirstActivity.class));
+                        startActivity(new Intent(NinthActivity.this, FirstActivity.class));
                         finish();
                         break;
                     case 1:
@@ -142,6 +142,9 @@ public class NinthActivity extends AppCompatActivity {
                     case 3:
                         break;
                     case 4:
+                        startActivity(new Intent(NinthActivity.this, FourthActivity.class));
+                        finish();
+
                         break;
                     case 5:
                         break;

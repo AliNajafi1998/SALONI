@@ -14,8 +14,8 @@ public class GroupViewTwo4FirstActivity extends ConstraintLayout {
     TextView sportComplexName;
     TextView hallNumber;
     TextView number;
-    String txtNo;
-    String complexName;
+    private String txtNo;
+    private String complexName;
     public GroupViewTwo4FirstActivity(Context context) {
         super(context);
         init(context);
@@ -47,8 +47,25 @@ public class GroupViewTwo4FirstActivity extends ConstraintLayout {
 
         number.setText(EnglishToPersian.englishToPersian(txtNo));
         hallNumber.setText("سالن شماره ");
-        sportComplexName.setText("مجتمع ورزشی افق لاله");
+        sportComplexName.setText(complexName);
 
     }
+    public void setComplexName(String complexName){
+        this.complexName = complexName;
+        invalidate();
+        requestLayout();
+    }
+    public void setTxtNo(String txtNo){
+        this.txtNo = txtNo;
+        invalidate();
+        requestLayout();
+    }
 
+    public String getTxtNo() {
+        return txtNo;
+    }
+
+    public String getComplexName() {
+        return complexName;
+    }
 }

@@ -19,7 +19,7 @@ public class GroupViewTwo3FirstActivity extends ConstraintLayout {
     TextView tvCost;
     TextView cost;
     TextView currency;
-    String text;
+    private String text;
 
     public GroupViewTwo3FirstActivity(Context context) {
         super(context);
@@ -52,13 +52,13 @@ public class GroupViewTwo3FirstActivity extends ConstraintLayout {
         cost.setTypeface(typeface);
         currency.setTypeface(typeface);
 
-        text = seperator(text);
+        text = separator(text);
         cost.setText(EnglishToPersian.englishToPersian(text));
 
 
     }
 
-    public String seperator(String text) {
+    public String separator(String text) {
         List<String> myNumbers = Arrays.asList(
                 NumberFormat.getNumberInstance(Locale.US).format(Integer.parseInt(text)).split(","));
         StringBuilder sb = new StringBuilder();
@@ -67,5 +67,14 @@ public class GroupViewTwo3FirstActivity extends ConstraintLayout {
             if (i != (myNumbers.size() - 1)) sb.append(",");
         }
         return sb.toString();
+    }
+    public void setCost(String cost){
+        this.text = cost;
+        invalidate();
+        requestLayout();
+    }
+
+    public String getText() {
+        return text;
     }
 }

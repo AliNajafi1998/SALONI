@@ -191,6 +191,8 @@ public class FirstActivity extends AppCompatActivity {
                     case 3:
                         break;
                     case 4:
+                        startActivity(new Intent(FirstActivity.this,FourthActivity.class));
+                        finish();
                         break;
                     case 5:
                         break;

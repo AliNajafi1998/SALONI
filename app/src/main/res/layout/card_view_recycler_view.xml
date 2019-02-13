@@ -1,36 +1,250 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/tools"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="10dp"
+    app:ignore="NamespaceTypo"
     card_view:cardPreventCornerOverlap="false"
     card_view:cardUseCompatPadding="true">
-<android.support.constraint.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-    <com.github.siyamed.shapeimageview.RoundedImageView
-        android:id="@+id/fieldView"
-        android:layout_width="70dp"
-        android:layout_height="84dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/field"
-        app:siRadius="10dp"
-        app:siSquare="true"
-        card_view:layout_constraintEnd_toEndOf="parent"
-        card_view:layout_constraintTop_toTopOf="parent" />
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintStart_toEndOf="@+id/sport_complex_name"
+            app:layout_constraintTop_toTopOf="@+id/sport_complex_name"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/field" />
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/complex_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="مجتمع ورزشی افق لاله"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            card_view:layout_constraintEnd_toStartOf="@+id/cardView3"
+            card_view:layout_constraintTop_toTopOf="@+id/cardView3" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="سالن شماره"
+            android:textSize="16sp"
+            card_view:layout_constraintEnd_toEndOf="@+id/complex_name"
+            card_view:layout_constraintTop_toBottomOf="@+id/complex_name" />
 
 
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/hall_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="یک"
+            android:textSize="16sp"
+            card_view:layout_constraintEnd_toStartOf="@+id/textView"
+            card_view:layout_constraintTop_toTopOf="@+id/textView" />
 
 
+        <TextView
+            android:id="@+id/time_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="زمان:"
+            android:textColor="#565657"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            card_view:layout_constraintEnd_toEndOf="@+id/cardView3"
+            card_view:layout_constraintTop_toBottomOf="@+id/cardView3" />
+
+        <TextView
+            android:id="@+id/tv_time_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="صبح"
+            android:textColor="#7E7E7F"
+            android:textSize="18sp"
+            card_view:layout_constraintBottom_toBottomOf="@+id/time_card"
+            card_view:layout_constraintEnd_toStartOf="@+id/time_card"
+            card_view:layout_constraintTop_toTopOf="@+id/time_card" />
+
+        <TextView
+            android:id="@+id/date_txt_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="تاریخ:"
+            android:textColor="#565657"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            card_view:layout_constraintEnd_toEndOf="@+id/time_card"
+            card_view:layout_constraintTop_toBottomOf="@+id/time_card" />
+
+        <TextView
+            android:id="@+id/tv_date_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="96/08/12"
+            android:textColor="#7E7E7F"
+            android:textSize="18sp"
+            card_view:layout_constraintBottom_toBottomOf="@+id/date_txt_card"
+            card_view:layout_constraintEnd_toStartOf="@+id/date_txt_card"
+            card_view:layout_constraintTop_toTopOf="@+id/date_txt_card" />
 
 
+        <TextView
+            android:id="@+id/tv_cost_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="هزینه:"
+            android:textColor="#565657"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            card_view:layout_constraintBottom_toBottomOf="@+id/cost_card"
+            card_view:layout_constraintStart_toEndOf="@+id/cost_card"
+            card_view:layout_constraintTop_toTopOf="@+id/cost_card" />
+
+        <TextView
+            android:id="@+id/cost_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="24000"
+            android:textColor="#00BE55"
+            android:textSize="18sp"
+            card_view:layout_constraintBottom_toBottomOf="@+id/currency"
+            card_view:layout_constraintStart_toEndOf="@+id/currency"
+            card_view:layout_constraintTop_toTopOf="@+id/currency" />
+
+        <TextView
+            android:id="@+id/currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="تومان"
+            android:textColor="#7E7E7F"
+            android:textSize="18sp"
+            card_view:layout_constraintStart_toStartOf="@+id/tv_end_card"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_end_card" />
 
 
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/time_from_txt_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="از ساعت :"
+            android:textColor="#565657"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            card_view:layout_constraintBottom_toBottomOf="@+id/tv_start_card"
+            card_view:layout_constraintStart_toEndOf="@+id/tv_start_card"
+            card_view:layout_constraintTop_toTopOf="@+id/tv_start_card" />
 
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_start_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="08:00"
+            android:textColor="#7E7E7F"
+            android:textSize="18sp"
+            card_view:layout_constraintBottom_toBottomOf="@+id/tv_to_card"
+            card_view:layout_constraintStart_toEndOf="@+id/tv_to_card"
+            card_view:layout_constraintTop_toTopOf="@+id/tv_to_card" />
 
-</android.support.constraint.ConstraintLayout>
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_to_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="تا"
+            android:textColor="#7E7E7F"
+            android:textSize="18sp"
+            card_view:layout_constraintBottom_toBottomOf="@+id/tv_end_card"
+            card_view:layout_constraintStart_toEndOf="@+id/tv_end_card"
+            card_view:layout_constraintTop_toTopOf="@+id/tv_end_card" />
+
+        <TextView
+            android:id="@+id/tv_end_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:text="12:00"
+            android:textColor="#7E7E7F"
+            android:textSize="18sp"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/cardView3" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/btn3"
+            android:text="مشاهده"
+            android:textColor="#AAC8F1"
+            android:textSize="16sp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="@+id/date_txt_card"
+            card_view:layout_constraintTop_toBottomOf="@+id/date_txt_card" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/btn1"
+            android:text="نظر"
+            android:textColor="#AABD73"
+            android:textSize="16sp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintStart_toStartOf="@+id/currency"
+            card_view:layout_constraintTop_toBottomOf="@+id/currency" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/btn2"
+            android:text="استرداد"
+            android:textColor="#FA4780"
+            android:textSize="16sp"
+            card_view:layout_constraintBottom_toBottomOf="@+id/button"
+            card_view:layout_constraintEnd_toStartOf="@+id/button3"
+            card_view:layout_constraintStart_toEndOf="@+id/button"
+            card_view:layout_constraintTop_toTopOf="@+id/button" />
+    </android.support.constraint.ConstraintLayout>
 </android.support.v7.widget.CardView>

@@ -54,4 +54,23 @@ public class GroupViewTwo1FirstActivity extends ConstraintLayout {
             tvTimeDate.setText(text);
         }
     }
+
+    public void isDate(boolean b) {
+        this.isDate = b;
+        invalidate();
+        requestLayout();
+    }
+
+    public void setTime(String time) {
+        this.text = time;
+        invalidate();
+        requestLayout();
+    }
+
+    public void setDate(String date) {
+        this.text = date;
+        invalidate();
+        requestLayout();
+
+    }
 }

@@ -14,8 +14,8 @@ public class GroupViewTwo2FirstActivity extends ConstraintLayout {
     TextView tvStart;
     TextView tvEnd;
     TextView tv1, tv2;
-    String startTime;
-    String endTime;
+    private String startTime;
+    private String endTime;
 
     public GroupViewTwo2FirstActivity(Context context) {
         super(context);
@@ -60,7 +60,25 @@ public class GroupViewTwo2FirstActivity extends ConstraintLayout {
         tvStart.setText(EnglishToPersian.englishToPersian(startTime));
         tvEnd.setText(EnglishToPersian.englishToPersian(endTime));
 
-
     }
 
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
+        invalidate();
+        requestLayout();
+    }
+
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
+        invalidate();
+        requestLayout();
+    }
+
+    public String getStartTime() {
+        return startTime;
+    }
+
+    public String getEndTime() {
+        return endTime;
+    }
 }

@@ -28,21 +28,18 @@ public class FourthActivity extends AppCompatActivity {
     Typeface typeface2;
     private ArrayList<String> names = new ArrayList<>();
     private ArrayList<Integer> icons = new ArrayList<>();
-    RecyclerView recyclerView;
-    LinearLayoutManager llm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fourth);
         changeStatusBarColor();
         appName = findViewById(R.id.app_name4);
-        recyclerView = findViewById(R.id.recyclerView_fourth);
-        llm = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(llm);
+
 
 
         preparingData();
         customActionbar();
+        prepareList();
         avoidStatusBarChange();
     }
 
@@ -95,7 +92,7 @@ public class FourthActivity extends AppCompatActivity {
     }
 
     private void customActionbar() {
-        PrepareNavigationBar();
+        prepareNavigationBar();
         drawerLayout = findViewById(R.id.activityRoot4);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar4);
         setSupportActionBar(toolbar);
@@ -122,7 +119,7 @@ public class FourthActivity extends AppCompatActivity {
         });
     }
 
-    private void PrepareNavigationBar() {
+    private void prepareNavigationBar() {
         NavigationBarAdapter adapter = new NavigationBarAdapter(this, names, icons);
         ListView list = findViewById(R.id.listOfNav);
         list.setAdapter(adapter);
@@ -150,5 +147,10 @@ public class FourthActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+    private void prepareList(){
+        LVAdapter adapter = new LVAdapter(this,Complex.initializeData());
+        ListView listView = findViewById(R.id.list_view_fourth);
+        listView.setAdapter(adapter);
     }
 }
