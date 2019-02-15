@@ -72,9 +72,9 @@ public class NinthActivity extends AppCompatActivity {
     }
 
     private void changeFont() {
-        typeface1 = EnglishToPersian.createTypeFace1(this);
+        typeface1 = Font.createTypeFaceIransansmobile(this);
         description.setTypeface(typeface1);
-        typeface2 = EnglishToPersian.createTypeFace2(this);
+        typeface2 = Font.createTypeFace2(this);
         appName.setTypeface(typeface2);
     }
 
@@ -124,7 +124,7 @@ public class NinthActivity extends AppCompatActivity {
 
     private void PrepareNavigationBar() {
         NavigationBarAdapter adapter = new NavigationBarAdapter(this, names, icons);
-        ListView list = findViewById(R.id.listOfNav9);
+        ListView list = findViewById(R.id.listOfNav);
         list.setAdapter(adapter);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

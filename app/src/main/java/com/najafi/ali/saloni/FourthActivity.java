@@ -87,7 +87,7 @@ public class FourthActivity extends AppCompatActivity {
     }
 
     private void changeFont() {
-        typeface2 = EnglishToPersian.createTypeFace2(this);
+        typeface2 = Font.createTypeFace2(this);
         appName.setTypeface(typeface2);
     }
 

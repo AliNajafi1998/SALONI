@@ -53,7 +53,7 @@ public class LVAdapter extends BaseAdapter {
             view = convertView;
             viewHolder = (LVAdapter.ViewHolder) view.getTag();
         }
-        Typeface typeface = EnglishToPersian.createTypeFace1(context);
+        Typeface typeface = Font.createTypeFaceIransansmobile(context);
         viewHolder.textView.setTypeface(typeface);
         viewHolder.hallNo.setTypeface(typeface);
         viewHolder.time_card.setTypeface(typeface);

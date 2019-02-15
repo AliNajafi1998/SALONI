@@ -40,7 +40,7 @@ public class GroupViewTwo1FirstActivity extends ConstraintLayout {
         rootView = inflate(context, R.layout.group_view_two_1_first_activity, this);
         tvTimeDate = rootView.findViewById(R.id.tv_time_or_date);
         tvTimeDateUI = rootView.findViewById(R.id.time_from_or_date_txt);
-        Typeface typeface = EnglishToPersian.createTypeFace1(context);
+        Typeface typeface = Font.createTypeFaceIransansmobile(context);
 
         tvTimeDateUI.setTypeface(typeface);
         tvTimeDate.setTypeface(typeface);

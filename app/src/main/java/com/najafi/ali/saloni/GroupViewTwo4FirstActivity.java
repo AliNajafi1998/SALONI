@@ -37,7 +37,7 @@ public class GroupViewTwo4FirstActivity extends ConstraintLayout {
 
     private void init(Context context) {
         rootView = inflate(context, R.layout.group_view_two_4_first_activity, this);
-        Typeface typeface = EnglishToPersian.createTypeFace1(context);
+        Typeface typeface = Font.createTypeFaceIransansmobile(context);
         sportComplexName = rootView.findViewById(R.id.sport_complex_name);
         hallNumber = rootView.findViewById(R.id.hallNumber);
         number = rootView.findViewById(R.id.number);

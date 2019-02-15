@@ -51,7 +51,7 @@ public class GroupViewTwo2FirstActivity extends ConstraintLayout {
         tv2.setText("تا");
         tv1.setText("ازساعت:");
 
-        Typeface typeface = EnglishToPersian.createTypeFace1(context);
+        Typeface typeface = Font.createTypeFaceIransansmobile(context);
         tv1.setTypeface(typeface);
         tv2.setTypeface(typeface);
         tvStart.setTypeface(typeface);

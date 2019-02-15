@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/cost"
+        android:id="@+id/costLin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -41,6 +41,6 @@
         android:textColor="#7E7E7F"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/tv_cost"
-        app:layout_constraintEnd_toStartOf="@+id/cost"
+        app:layout_constraintEnd_toStartOf="@+id/costLin"
         app:layout_constraintTop_toTopOf="@+id/tv_cost" />
 </android.support.constraint.ConstraintLayout>

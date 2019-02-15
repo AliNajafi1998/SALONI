@@ -66,9 +66,9 @@ public class FirstActivity extends AppCompatActivity {
 
 
     private void changeFont() {
-        typeface1 = EnglishToPersian.createTypeFace1(this);
+        typeface1 = Font.createTypeFaceIransansmobile(this);
         desc.setTypeface(typeface1);
-        typeface2 = EnglishToPersian.createTypeFace2(this);
+        typeface2 = Font.createTypeFace2(this);
         appName.setTypeface(typeface2);
 
     }
@@ -189,6 +189,8 @@ public class FirstActivity extends AppCompatActivity {
                          finish();
                         break;
                     case 3:
+                        startActivity(new Intent(FirstActivity.this,ThirdActivity.class));
+                        finish();
                         break;
                     case 4:
                         startActivity(new Intent(FirstActivity.this,FourthActivity.class));

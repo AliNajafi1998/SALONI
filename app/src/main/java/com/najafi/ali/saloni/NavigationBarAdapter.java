@@ -56,7 +56,7 @@ public class NavigationBarAdapter extends BaseAdapter {
         viewHolder.icon.setImageResource(mnu_ItemsIcon.get(position));
         viewHolder.image_text.setText(mnu_ItemsName.get(position));
 
-        Typeface typeface = EnglishToPersian.createTypeFace1(context);
+        Typeface typeface = Font.createTypeFaceIransansmobile(context);
         viewHolder.image_text.setTypeface(typeface);
 
 

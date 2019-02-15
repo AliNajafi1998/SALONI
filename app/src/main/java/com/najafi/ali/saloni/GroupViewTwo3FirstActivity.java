@@ -42,12 +42,12 @@ public class GroupViewTwo3FirstActivity extends ConstraintLayout {
     private void init(Context context) {
         rootView = inflate(context, R.layout.group_view_two_3_first_activity, this);
         tvCost = rootView.findViewById(R.id.tv_cost);
-        cost = rootView.findViewById(R.id.cost);
+        cost = rootView.findViewById(R.id.costLin);
         currency = rootView.findViewById(R.id.currency);
 
         tvCost.setText("هزینه:");
         currency.setText("تومان");
-        Typeface typeface = EnglishToPersian.createTypeFace1(context);
+        Typeface typeface = Font.createTypeFaceIransansmobile(context);
         tvCost.setTypeface(typeface);
         cost.setTypeface(typeface);
         currency.setTypeface(typeface);
