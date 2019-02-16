@@ -28,7 +28,6 @@ public class GroupViewTwo3FirstActivity extends ConstraintLayout {
 
     public GroupViewTwo3FirstActivity(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
-
     }
 
     public GroupViewTwo3FirstActivity(Context context, AttributeSet attrs, int defStyleAttr) {

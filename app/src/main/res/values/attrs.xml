@@ -24,7 +24,11 @@
 
     <declare-styleable name="GroupViewTwo4FirstActivity">
         <attr name="hallNo" format="string" />
-        <attr name="complex_name" format="string"/>
+        <attr name="complex_name" format="string" />
     </declare-styleable>
-
+    <declare-styleable name="TimeGroupView">
+        <attr name="startTime" format="string" />
+        <attr name="endTime" format="string" />
+        <attr name="time" format="string" />
+    </declare-styleable>
 </resources>

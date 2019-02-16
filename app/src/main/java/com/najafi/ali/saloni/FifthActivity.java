@@ -6,7 +6,6 @@ import android.graphics.Color;
 import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TabLayout;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -20,6 +19,7 @@ import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -31,13 +31,24 @@ public class FifthActivity extends AppCompatActivity {
     int num = 0;
     ArrayList<Integer> layoutIds = new ArrayList<>();
     ViewPager viewPager;
-
+    TextView textView4;
+    TextView textView2;
+    TextView textView3;
+    TextView textView5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fifth);
         changeStatusBarColor();
+        textView4 = findViewById(R.id.textView4);
+        textView2= findViewById(R.id.textView2);
+        textView3 = findViewById(R.id.textView3);
+        textView5 = findViewById(R.id.textView5);
+        textView4.setTypeface(Font.createTypeFaceIransansmobile(this));
+        textView2.setTypeface(Font.createTypeFaceIransansmobileMedium(this));
+        textView3.setTypeface(Font.createTypeFaceIransansmobileMedium(this));
+        textView5.setTypeface(Font.createTypeFaceIransansmobile(this));
 
         preparingData();
         viewPager = findViewById(R.id.viewpager5);
@@ -46,7 +57,6 @@ public class FifthActivity extends AppCompatActivity {
         viewPager.setAdapter(pagerAdapter);
         TabLayout tabLayout = findViewById(R.id.tab_layout);
         tabLayout.setupWithViewPager(viewPager, true);
-
 
 
         listener();
@@ -168,7 +178,6 @@ public class FifthActivity extends AppCompatActivity {
         public int getCount() {
             return layoutIds.size();
         }
-
 
 
         @Override
