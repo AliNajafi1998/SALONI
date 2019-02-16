@@ -197,6 +197,8 @@ public class FirstActivity extends AppCompatActivity {
                         finish();
                         break;
                     case 5:
+                        startActivity(new Intent(FirstActivity.this,FifthActivity.class));
+                        finish();
                         break;
 
                 }
