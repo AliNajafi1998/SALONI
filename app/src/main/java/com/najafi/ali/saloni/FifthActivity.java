@@ -1,5 +1,6 @@
 package com.najafi.ali.saloni;
 
+import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -17,24 +18,31 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.AdapterView;
+import android.widget.DatePicker;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 
-public class FifthActivity extends AppCompatActivity {
+public class FifthActivity extends AppCompatActivity implements  DatePickerDialog.OnDateSetListener {
     private ArrayList<String> names = new ArrayList<>();
     private ArrayList<Integer> icons = new ArrayList<>();
     DrawerLayout drawerLayout;
     int num = 0;
+    boolean flag = false;
     ArrayList<Integer> layoutIds = new ArrayList<>();
     ViewPager viewPager;
     TextView textView4;
     TextView textView2;
     TextView textView3;
     TextView textView5;
+    TimeGroupView timeGroupView1;
+    TimeGroupView timeGroupView2;
+    TimeGroupView timeGroupView3;
+    TimeGroupView timeGroupView4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,9 +50,15 @@ public class FifthActivity extends AppCompatActivity {
         setContentView(R.layout.activity_fifth);
         changeStatusBarColor();
         textView4 = findViewById(R.id.textView4);
-        textView2= findViewById(R.id.textView2);
+        textView2 = findViewById(R.id.textView2);
         textView3 = findViewById(R.id.textView3);
         textView5 = findViewById(R.id.textView5);
+        timeGroupView1 = findViewById(R.id.timeGroupView1);
+        timeGroupView2 = findViewById(R.id.timeGroupView2);
+        timeGroupView3 = findViewById(R.id.timeGroupView3);
+        timeGroupView4 = findViewById(R.id.timeGroupView4);
+
+
         textView4.setTypeface(Font.createTypeFaceIransansmobile(this));
         textView2.setTypeface(Font.createTypeFaceIransansmobileMedium(this));
         textView3.setTypeface(Font.createTypeFaceIransansmobileMedium(this));
@@ -157,6 +171,50 @@ public class FifthActivity extends AppCompatActivity {
         });
     }
 
+    public void onClick(View view) {
+
+        switch (view.getId()) {
+            case R.id.timeGroupView1:
+                timeGroupView1.changeColor(true, this);
+                timeGroupView2.changeColor(false, this);
+                timeGroupView3.changeColor(false, this);
+                timeGroupView4.changeColor(false, this);
+                break;
+            case R.id.timeGroupView2:
+                timeGroupView1.changeColor(false, this);
+                timeGroupView2.changeColor(true, this);
+                timeGroupView3.changeColor(false, this);
+                timeGroupView4.changeColor(false, this);
+                break;
+            case R.id.timeGroupView3:
+                timeGroupView1.changeColor(false, this);
+                timeGroupView2.changeColor(false, this);
+                timeGroupView3.changeColor(true, this);
+                timeGroupView4.changeColor(false, this);
+                break;
+            case R.id.timeGroupView4:
+                timeGroupView1.changeColor(false, this);
+                timeGroupView2.changeColor(false, this);
+                timeGroupView3.changeColor(false, this);
+                timeGroupView4.changeColor(true, this);
+                break;
+            case R.id.card:
+                //Choose Date:
+                DataPickerFragment dataPickerFragment = new DataPickerFragment();
+                dataPickerFragment.show(getSupportFragmentManager(), "date picker");
+                break;
+
+        }
+    }
+
+    @Override
+    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+        Calendar c = Calendar.getInstance();
+        c.set(Calendar.YEAR, year);
+        c.set(Calendar.MONTH, month);
+        c.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+    }
+
     class SliderPagerAdapter extends PagerAdapter {
 
         Context context;
@@ -191,6 +249,5 @@ public class FifthActivity extends AppCompatActivity {
             container.removeView(view);
         }
     }
-
 
 }

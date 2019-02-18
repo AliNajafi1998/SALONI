@@ -12,7 +12,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginBottom="8dp"
         android:scaleType="fitXY"
-
+        android:tint="#747474"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/time_group"
         app:layout_constraintTop_toTopOf="@+id/time_group"

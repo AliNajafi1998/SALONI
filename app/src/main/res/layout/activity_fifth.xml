@@ -54,8 +54,8 @@
             android:layout_height="wrap_content"
             android:layout_row="0"
             android:layout_column="1"
-
             android:layout_marginTop="16dp"
+            android:onClick="onClick"
             app:endTime="12"
             app:layout_constraintEnd_toEndOf="@+id/textView3"
             app:layout_constraintTop_toBottomOf="@+id/textView3"
@@ -63,13 +63,14 @@
             app:time="صبح" />
 
         <com.najafi.ali.saloni.TimeGroupView
-            android:id="@+id/timeGroupView"
+            android:id="@+id/timeGroupView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
             android:layout_column="0"
             android:layout_marginEnd="32dp"
             app:endTime="16"
+            android:onClick="onClick"
             app:layout_constraintBottom_toBottomOf="@id/timeGroupView2"
             app:layout_constraintEnd_toStartOf="@id/timeGroupView2"
             app:layout_constraintTop_toTopOf="@id/timeGroupView2"
@@ -82,6 +83,7 @@
             android:layout_height="wrap_content"
             android:layout_row="1"
             android:layout_column="1"
+            android:onClick="onClick"
             android:layout_marginTop="16dp"
             app:endTime="20"
             app:layout_constraintEnd_toEndOf="@+id/timeGroupView2"
@@ -90,15 +92,16 @@
             app:time="عصر" />
 
         <com.najafi.ali.saloni.TimeGroupView
-            android:id="@+id/night"
+            android:id="@+id/timeGroupView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="1"
             android:layout_column="0"
             android:layout_marginTop="16dp"
             app:endTime="24"
-            app:layout_constraintEnd_toEndOf="@+id/timeGroupView"
-            app:layout_constraintTop_toBottomOf="@+id/timeGroupView"
+            android:onClick="onClick"
+            app:layout_constraintEnd_toEndOf="@+id/timeGroupView1"
+            app:layout_constraintTop_toBottomOf="@+id/timeGroupView1"
             app:startTime="20"
             app:time="شب" />
 
@@ -124,6 +127,7 @@
 
         <android.support.v7.widget.CardView
             android:id="@+id/card"
+            android:onClick="onClick"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -193,7 +197,7 @@
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/night"
+            app:layout_constraintTop_toBottomOf="@+id/timeGroupView4"
             tools:layout_editor_absoluteY="491dp" />
 
         <LinearLayout
