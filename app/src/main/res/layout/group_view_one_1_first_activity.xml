@@ -31,7 +31,7 @@
             android:inputType=""
             android:maxLength="11"
             android:maxLines="1"
-            android:textColor="#90BD32"
+            android:textColor="@android:color/black"
             app:layout_constraintBottom_toBottomOf="@+id/img_icon"
             app:layout_constraintEnd_toStartOf="@+id/img_icon"
             app:layout_constraintTop_toTopOf="@+id/img_icon" />
