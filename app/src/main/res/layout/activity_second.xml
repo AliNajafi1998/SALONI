@@ -78,6 +78,7 @@
         </android.support.v7.widget.Toolbar>
 
         <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar5"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="#51b057"
@@ -108,9 +109,9 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="4dp"
+                        android:onClick="next"
                         android:scaleType="fitXY"
                         app:cardCornerRadius="8dp"
-                        android:onClick="next"
                         app:srcCompat="@drawable/ic_chevron_left_black_24dp">
 
                         <include
@@ -142,8 +143,8 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginEnd="4dp"
                         android:background="@android:color/transparent"
-                        android:scaleType="fitXY"
                         android:onClick="previous"
+                        android:scaleType="fitXY"
                         app:cardCornerRadius="8dp"
                         app:srcCompat="@drawable/ic_three_lines">
 
@@ -162,12 +163,87 @@
 
         </android.support.v7.widget.Toolbar>
 
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager2_top"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar5" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/view_tab2"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:background="#e3e3e3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewPager2_top"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/Green"
+            app:tabMode="fixed" />
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager2_below"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_tab2" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#353a4d"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/txt_sign_in_sign_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="ورود/ثبت نام"
+                    android:textColor="#fff"
+                    android:textSize="20sp" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/appCompatImageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:scaleType="centerInside"
+                    android:layout_marginBottom="2dp"
+                    android:tint="#fff"
+                    app:srcCompat="@drawable/ic_mem" />
+
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+        </android.support.constraint.ConstraintLayout>
     </android.support.constraint.ConstraintLayout>
 
     <android.support.design.widget.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-
         android:layout_gravity="end">
 
         <LinearLayout

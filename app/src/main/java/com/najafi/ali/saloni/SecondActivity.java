@@ -2,7 +2,6 @@ package com.najafi.ali.saloni;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.Typeface;
 import android.os.Build;
 
 import com.ibm.icu.text.DateFormat;
@@ -22,7 +21,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 
@@ -33,6 +31,7 @@ public class SecondActivity extends AppCompatActivity {
     int num = 0;
     TextView appName;
     TextView date;
+    TextView signInSignUp;
     private ArrayList<String> names = new ArrayList<>();
     private ArrayList<Integer> icons = new ArrayList<>();
     ULocale locale = new ULocale("fa_IR@calendar=persian");
@@ -57,11 +56,13 @@ public class SecondActivity extends AppCompatActivity {
     private void init() {
         appName = findViewById(R.id.app_name2);
         date = findViewById(R.id.date);
+        signInSignUp = findViewById(R.id.txt_sign_in_sign_up);
     }
 
     private void changeFont() {
         appName.setTypeface(Font.createTypeFace2(this));
         date.setTypeface(Font.createTypeFaceIransansmobileLight(this));
+        signInSignUp.setTypeface(Font.createTypeFaceIransansmobileLight(this));
     }
 
     private void avoidStatusBarChange() {
