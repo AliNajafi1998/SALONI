@@ -181,6 +181,8 @@ public class FirstActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position){
                     case 0:
+                        startActivity(new Intent(FirstActivity.this,SecondActivity.class));
+                        finish();
                         break;
                     case 1:
                         startActivity(new Intent(FirstActivity.this,SixthActivity.class));

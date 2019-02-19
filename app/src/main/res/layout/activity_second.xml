@@ -37,7 +37,7 @@
                 <TableRow>
 
                     <android.support.v7.widget.AppCompatImageButton
-                        android:id="@+id/action_bar_back9"
+                        android:id="@+id/action_bar_back2"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_gravity="center_vertical"
@@ -61,7 +61,7 @@
                         android:textStyle="bold" />
 
                     <android.support.v7.widget.AppCompatImageButton
-                        android:id="@+id/action_bar_three_lines9"
+                        android:id="@+id/action_bar_three_lines2"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_alignParentTop="true"
@@ -76,6 +76,92 @@
             </TableLayout>
 
         </android.support.v7.widget.Toolbar>
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#51b057"
+            android:contentInsetStart="0dp"
+            android:contentInsetLeft="0dp"
+            android:contentInsetEnd="0dp"
+            android:contentInsetRight="0dp"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar2">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#51b057"
+                android:orientation="horizontal">
+
+                <TableRow>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/prev_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="4dp"
+                        android:scaleType="fitXY"
+                        app:cardCornerRadius="8dp"
+                        android:onClick="next"
+                        app:srcCompat="@drawable/ic_chevron_left_black_24dp">
+
+                        <include
+                            layout="@layout/next_date"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/date"
+                        style="@style/shadow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#ffffff"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/next_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="4dp"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitXY"
+                        android:onClick="previous"
+                        app:cardCornerRadius="8dp"
+                        app:srcCompat="@drawable/ic_three_lines">
+
+
+                        <include
+                            layout="@layout/prev_date"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </android.support.v7.widget.CardView>
+                </TableRow>
+
+            </TableLayout>
+
+        </android.support.v7.widget.Toolbar>
+
     </android.support.constraint.ConstraintLayout>
 
     <android.support.design.widget.NavigationView
