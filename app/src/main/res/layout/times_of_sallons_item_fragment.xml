@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.loopeer.shadow.ShadowView
+        android:id="@+id/cardView2_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="10dp"
+        app:shadowColor="#747474"
+        android:foreground="?attr/selectableItemBackground"
+        app:cornerRadiusBR="20dp"
+        app:cornerRadiusTL="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shadowMargin="5dp"
+        app:shadowRadius="14dp">
+
+        <com.najafi.ali.saloni.GroupViewClockTime
+            android:id="@+id/grp_time_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:txt_end_time="12:00"
+            app:txt_start_time="10:00"
+            app:txt_time="صبح">
+
+        </com.najafi.ali.saloni.GroupViewClockTime>
+    </com.loopeer.shadow.ShadowView>
+
+    <com.loopeer.shadow.ShadowView
+        android:id="@+id/cardView2_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="10dp"
+        app:shadowColor="#747474"
+        android:foreground="?attr/selectableItemBackground"
+        app:cornerRadiusBR="20dp"
+        app:cornerRadiusTL="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shadowMargin="5dp"
+        app:shadowRadius="14dp">
+
+        <com.najafi.ali.saloni.GroupViewClockTime
+            android:id="@+id/grp_time_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:txt_end_time="10:00"
+            app:txt_start_time="08:00"
+            app:txt_time="صبح">
+
+        </com.najafi.ali.saloni.GroupViewClockTime>
+    </com.loopeer.shadow.ShadowView>
+
+</android.support.constraint.ConstraintLayout>

@@ -8,7 +8,13 @@ import com.ibm.icu.text.DateFormat;
 import com.ibm.icu.util.Calendar;
 import com.ibm.icu.util.ULocale;
 
+import android.support.annotation.Nullable;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -37,6 +43,11 @@ public class SecondActivity extends AppCompatActivity {
     ULocale locale = new ULocale("fa_IR@calendar=persian");
     DateFormat df = DateFormat.getDateInstance(DateFormat.DATE_FIELD, locale);
     Calendar calendar = Calendar.getInstance(locale);
+    ArrayList<Fragment> fragmentsBelow = new ArrayList<>();
+    ArrayList<String> tabItemsBelow = new ArrayList<>();
+    ViewPager viewPagerBelow;
+    TabLayout tabLayoutBelow;
+    ClockTimeFragment clockTimeFragment = new ClockTimeFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,12 +62,20 @@ public class SecondActivity extends AppCompatActivity {
         settingDate();
         avoidStatusBarChange();
 
+
+        SlidePagerAdapterBelow slidePagerAdapter = new SlidePagerAdapterBelow(getSupportFragmentManager());
+        viewPagerBelow.setAdapter(slidePagerAdapter);
+        tabLayoutBelow.setupWithViewPager(viewPagerBelow);
+        viewPagerBelow.beginFakeDrag();
+
     }
 
     private void init() {
         appName = findViewById(R.id.app_name2);
         date = findViewById(R.id.date);
         signInSignUp = findViewById(R.id.txt_sign_in_sign_up);
+        viewPagerBelow = findViewById(R.id.viewPager2_below);
+        tabLayoutBelow = findViewById(R.id.view_tab2);
     }
 
     private void changeFont() {
@@ -104,8 +123,19 @@ public class SecondActivity extends AppCompatActivity {
         icons.add(R.drawable.ic_search_black_24dp);
         icons.add(R.drawable.question);
         icons.add(R.drawable.mail);
+        //----------------------------------------------
+        tabItemsBelow.add("تایم ها");
+        tabItemsBelow.add("اطلاعات");
+        tabItemsBelow.add("نظرات");
+        //TODO: ADD THE FRAGMENTS TO THE FRAGMENTS LIST
+        fragmentsBelow.add(clockTimeFragment);
+        fragmentsBelow.add(new ClockTimeFragment());
+        fragmentsBelow.add(new ClockTimeFragment());
+//        fragmentsBelow.add();
+//        fragmentsBelow.add();
 
     }
+
 
     private void customActionbar() {
         PrepareNavigationList();
@@ -181,4 +211,28 @@ public class SecondActivity extends AppCompatActivity {
     private void settingDate() {
         date.setText(df.format(calendar));
     }
+
+    class SlidePagerAdapterBelow extends FragmentPagerAdapter {
+        SlidePagerAdapterBelow(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int i) {
+            return fragmentsBelow.get(i);
+        }
+
+        @Override
+        public int getCount() {
+            return fragmentsBelow.size();
+        }
+
+        @Nullable
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return tabItemsBelow.get(position);
+        }
+
+    }
+
 }

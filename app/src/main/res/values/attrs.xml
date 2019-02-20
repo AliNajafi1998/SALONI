@@ -31,4 +31,11 @@
         <attr name="endTime" format="string" />
         <attr name="time" format="string" />
     </declare-styleable>
+
+    <declare-styleable name="GroupViewClockTime">
+        <attr name="txt_time" format="string" />
+        <attr name="txt_start_time" format="string" />
+        <attr name="txt_end_time" format="string" />
+    </declare-styleable>
+
 </resources>

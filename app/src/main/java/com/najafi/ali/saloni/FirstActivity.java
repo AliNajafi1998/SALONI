@@ -1,6 +1,5 @@
 package com.najafi.ali.saloni;
 
-
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -179,29 +178,29 @@ public class FirstActivity extends AppCompatActivity {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch (position){
+                switch (position) {
                     case 0:
-                        startActivity(new Intent(FirstActivity.this,SecondActivity.class));
+                        startActivity(new Intent(FirstActivity.this, SecondActivity.class));
                         finish();
                         break;
                     case 1:
-                        startActivity(new Intent(FirstActivity.this,SixthActivity.class));
+                        startActivity(new Intent(FirstActivity.this, SixthActivity.class));
                         finish();
                         break;
                     case 2:
-                         startActivity(new Intent(FirstActivity.this,NinthActivity.class));
-                         finish();
+                        startActivity(new Intent(FirstActivity.this, NinthActivity.class));
+                        finish();
                         break;
                     case 3:
-                        startActivity(new Intent(FirstActivity.this,ThirdActivity.class));
+                        startActivity(new Intent(FirstActivity.this, ThirdActivity.class));
                         finish();
                         break;
                     case 4:
-                        startActivity(new Intent(FirstActivity.this,FourthActivity.class));
+                        startActivity(new Intent(FirstActivity.this, FourthActivity.class));
                         finish();
                         break;
                     case 5:
-                        startActivity(new Intent(FirstActivity.this,FifthActivity.class));
+                        startActivity(new Intent(FirstActivity.this, FifthActivity.class));
                         finish();
                         break;
 
