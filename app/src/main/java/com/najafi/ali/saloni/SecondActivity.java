@@ -28,6 +28,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 public class SecondActivity extends AppCompatActivity {
@@ -44,8 +46,10 @@ public class SecondActivity extends AppCompatActivity {
     DateFormat df = DateFormat.getDateInstance(DateFormat.DATE_FIELD, locale);
     Calendar calendar = Calendar.getInstance(locale);
     ArrayList<Fragment> fragmentsBelow = new ArrayList<>();
+    ArrayList<Fragment> fragmentsTop = new ArrayList<>();
     ArrayList<String> tabItemsBelow = new ArrayList<>();
     ViewPager viewPagerBelow;
+    ViewPager viewPagerTop;
     TabLayout tabLayoutBelow;
     ClockTimeFragment clockTimeFragment = new ClockTimeFragment();
 
@@ -63,11 +67,14 @@ public class SecondActivity extends AppCompatActivity {
         avoidStatusBarChange();
 
 
-        SlidePagerAdapterBelow slidePagerAdapter = new SlidePagerAdapterBelow(getSupportFragmentManager());
-        viewPagerBelow.setAdapter(slidePagerAdapter);
+        SlidePagerAdapterBelow slidePagerAdapterBelow = new SlidePagerAdapterBelow(getSupportFragmentManager());
+        viewPagerBelow.setAdapter(slidePagerAdapterBelow);
         tabLayoutBelow.setupWithViewPager(viewPagerBelow);
         viewPagerBelow.beginFakeDrag();
 
+        SlidePagerAdapterTop slidePagerAdapterTop = new SlidePagerAdapterTop(getSupportFragmentManager());
+        viewPagerTop.setAdapter(slidePagerAdapterTop);
+        pageSwitcher(4);
     }
 
     private void init() {
@@ -76,6 +83,7 @@ public class SecondActivity extends AppCompatActivity {
         signInSignUp = findViewById(R.id.txt_sign_in_sign_up);
         viewPagerBelow = findViewById(R.id.viewPager2_below);
         tabLayoutBelow = findViewById(R.id.view_tab2);
+        viewPagerTop = findViewById(R.id.viewPager2_top);
     }
 
     private void changeFont() {
@@ -124,15 +132,17 @@ public class SecondActivity extends AppCompatActivity {
         icons.add(R.drawable.question);
         icons.add(R.drawable.mail);
         //----------------------------------------------
-        tabItemsBelow.add("تایم ها");
-        tabItemsBelow.add("اطلاعات");
         tabItemsBelow.add("نظرات");
+        tabItemsBelow.add("اطلاعات");
+        tabItemsBelow.add("تایم ها");
         //TODO: ADD THE FRAGMENTS TO THE FRAGMENTS LIST
         fragmentsBelow.add(clockTimeFragment);
         fragmentsBelow.add(new ClockTimeFragment());
         fragmentsBelow.add(new ClockTimeFragment());
-//        fragmentsBelow.add();
-//        fragmentsBelow.add();
+
+        fragmentsTop.add(new Slide1Fragment());
+        fragmentsTop.add(new Slide2Fragment());
+        fragmentsTop.add(new Slide3Fragment());
 
     }
 
@@ -235,4 +245,55 @@ public class SecondActivity extends AppCompatActivity {
 
     }
 
+
+    class SlidePagerAdapterTop extends FragmentPagerAdapter {
+        SlidePagerAdapterTop(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int i) {
+            return fragmentsTop.get(i);
+        }
+
+        @Override
+        public int getCount() {
+            return fragmentsTop.size();
+        }
+    }
+
+    Timer timer;
+    int page = 0;
+
+
+    public void pageSwitcher(int seconds) {
+        timer = new Timer(); // At this line a new Thread will be created
+        timer.scheduleAtFixedRate(new RemindTask(), 0, seconds * 1000); // delay
+        // in
+        // milliseconds
+    }
+
+    // this is an inner class...
+    class RemindTask extends TimerTask {
+
+        @Override
+        public void run() {
+
+            // As the TimerTask run on a seperate thread from UI thread we have
+            // to call runOnUiThread to do work on UI thread.
+            runOnUiThread(new Runnable() {
+                public void run() {
+
+                    viewPagerTop.setCurrentItem(page);
+                    page += 1;
+                    if (page == 3) { // In my case the number of pages are 3
+                        page = 0;
+
+                    }
+
+                }
+            });
+
+        }
+    }
 }

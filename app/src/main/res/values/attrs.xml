@@ -37,5 +37,8 @@
         <attr name="txt_start_time" format="string" />
         <attr name="txt_end_time" format="string" />
     </declare-styleable>
-
+    <declare-styleable name="GroupViewDiscount">
+        <attr name="salon_no" format="string" />
+        <attr name="rate" format="string" />
+    </declare-styleable>
 </resources>

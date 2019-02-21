@@ -1,8 +1,5 @@
 package com.najafi.ali.saloni;
 
-import android.content.Context;
-import android.graphics.Typeface;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,6 +20,7 @@ public class EnglishToPersian {
         numbers.put("9", "۹");
         numbers.put(":", ":");
         numbers.put("/", "/");
+        numbers.put(".", "/");
         numbers.put(",", ",");
 
         if (englishText.equals("")) return "";
